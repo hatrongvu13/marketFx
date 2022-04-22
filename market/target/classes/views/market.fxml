@@ -5,12 +5,15 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -53,7 +56,7 @@
                         <String fx:value="shadow" />
                      </styleClass>
                   </HBox>
-                  <Pane prefHeight="65.0" />
+                  <Pane prefHeight="81.0" prefWidth="451.0" />
                   <VBox alignment="CENTER" prefHeight="535.0" prefWidth="100.0" styleClass="chosen-icon-card">
                      <children>
                         <HBox prefHeight="63.0" prefWidth="451.0">
@@ -125,6 +128,7 @@
                         <Insets left="40.0" right="40.0" />
                      </VBox.margin>
                   </VBox>
+                  <Pane layoutX="10.0" layoutY="175.0" prefHeight="65.0" VBox.vgrow="ALWAYS" />
                </children>
                <opaqueInsets>
                   <Insets right="30.0" />
@@ -159,6 +163,7 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
+                        <Pane layoutX="361.0" layoutY="10.0" prefHeight="100.0" prefWidth="106.0" />
                         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="370.0" styleClass="free-delivery-card" stylesheets="@../values/style.css">
                            <children>
                               <Label text="Free delivery" textFill="#797979">
@@ -174,7 +179,7 @@
                            </children>
                         </VBox>
                         <Pane prefHeight="100.0" prefWidth="106.0" HBox.hgrow="ALWAYS" />
-                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="370.0" styleClass="free-delivery-card" stylesheets="@../values/style.css">
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="370.0" styleClass="shopping-online-card" stylesheets="@../values/style.css">
                            <children>
                               <Label prefHeight="22.0" prefWidth="152.0" text="Shopping Online" textFill="#797979">
                                  <font>
@@ -188,10 +193,24 @@
                               </Label>
                            </children>
                         </VBox>
+                        <Pane layoutX="733.0" layoutY="10.0" prefHeight="100.0" prefWidth="106.0" />
                      </children>
                      <VBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane prefHeight="682.0" prefWidth="785.0">
+                           <content>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
                   </HBox>
                </children>
             </VBox>
